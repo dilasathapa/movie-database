@@ -4,6 +4,7 @@ const connection = require("./db/connectDatabase")
 // const userRouter = require("./routes/getusers.routes")
 const cors = require("cors")
 const postRouter = require("./routes/postmovies.routes")
+const getRouter = require("./routes/getmovies.routes")
 const app = express();
 // app.use(express.json());
 
@@ -17,7 +18,7 @@ app.use(express.json({limit: '2mb'}));
 
 app.use("/", postRouter)
 
-// app.use("/", userRouter);
+app.use("/", getRouter);
   
 
 connection()

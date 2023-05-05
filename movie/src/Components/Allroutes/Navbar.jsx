@@ -1,13 +1,15 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom"
+import '../Styles/Navbar.css' 
 
 
 function Navbar(){
     return (
 
         <>
-        <div>
+        <div id="nav-parent">
             <h1>Navbar</h1>
+
+
         </div>
         </>
     )

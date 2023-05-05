@@ -1,21 +1,17 @@
-// import { ADD_DESCRIPTION, GET_FOLLOWINGPOSTS } from "./actionType"
-// import { GET_LOGGEDINUSERPOSTS } from "./actionType"
-
+import { GET_ALLMOVIES } from "./actionType";
 const initialState = {
-    description: [],
-    loggedinuserposts: [],
-    following_posts: [],
-    dp: {},
+   allmovies : [],
+
 }
 
 export default function reducer(state = initialState, { type, payload }) {
    console.log("type", type)
     switch (type) {
-        // case ADD_DESCRIPTION:
-        //     return {
-        //         ...state,
-        //         description: payload,
-        //     }
+        case GET_ALLMOVIES:
+            return {
+                ...state,
+                allmovies: payload,
+            }
 
         // case GET_LOGGEDINUSERPOSTS:
         //     return {

@@ -1,5 +1,6 @@
 
 import './App.css';
+import AllRoutes from './Components/Allroutes/AllRoutes';
 import Navbar from './Components/Allroutes/Navbar';
 import AddMovie from './Components/Pages/AddMovie';
 // import Home from './Components/Pages/Home';
@@ -7,10 +8,12 @@ import AddMovie from './Components/Pages/AddMovie';
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
-      <Navbar/>
       {/* <Home/> */}
-      <AddMovie/>
+      {/* <AddMovie/> */}
+      <Navbar/>
+
+      <AllRoutes/>
+
     </div>
   );
 }

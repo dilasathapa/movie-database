@@ -30,6 +30,7 @@
     padding-left: 20px;
     position: absolute;
     margin: -10% 25% 0 25%;
+    background-color: rgb(59,59,59);
 
     /* z-index: ; */
 }
@@ -45,15 +46,47 @@
 
 }
 
+#sorting{
+    border: 2px solid blue;
+    height: 50px;
+    margin-top: 2%;
+}
 
+/* --------------added----------------------------------------- */
+#sorting{
+    margin: 2% 15%;
+}
+#sorting > button{
+    width: 20%;
+    height: 40px;
+    margin: 0 3% 0 70%;
+}
 
+#addedm{
+    border: 2px solid green;
+    margin: 2% 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
 
+.display-allmovies{
+    /* border: 2px solid red; */
+    width: 85%;
+    margin: auto;
+    padding: 4%;
+    border-radius: 10px;
+    background-color: #0c0a0a;
+}
 
+#postpic{
+    height: 340px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 
+}
 
-
-
-
+/* ------------------------------------------------- */
 
 
 

@@ -4,7 +4,7 @@ import bg from "../../images/bgcc.jpg"
 import { FcCameraAddon } from "react-icons/fc";
 import w from "../../images/m3.jpg"
 import { useDispatch } from "react-redux"
-import postmovies from "../../Redux/action";
+import postmovies from "../../Redux/action.js";
 
 
 function AddMovie() {

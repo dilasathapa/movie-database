@@ -1,0 +1,83 @@
+#home-parent{
+    border: 2px solid red;
+}
+#search-movie{
+    border: 2px solid rgb(29, 181, 18);
+    /* margin-bottom: 30%; */
+
+}
+
+#search-bg{
+    border: 2px solid purple;
+    height: 350px;
+    margin: 0 15%;
+    position: relative;
+    backdrop-filter: blur(1px);
+    /* display: inline-block; */
+}
+
+.bg-img{
+    height: 350px;
+    width: 100%;
+    /* backdrop-filter: blur(1px); */
+}
+
+.search-box{
+    width: 45%;
+    height: 42px;
+    border: 2px solid olivedrab;
+    border-radius: 60px;
+    padding-left: 20px;
+    position: absolute;
+    margin: -10% 25% 0 25%;
+
+    /* z-index: ; */
+}
+
+.search-btn{
+    width: 6%;
+    height: 30px;
+    margin: -9.5% 5% 0 65%;
+    position: absolute;
+    border-radius: 60px;
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#trending{
+    border: 2px solid blue;
+}
+
+#display-effect{
+    border: 2px solid orange;
+}
+
+#shows{
+    border: 2px solid rgb(54, 4, 12);
+}
+
+#res-movies{
+    border: 2px solid rgb(6, 18, 6);
+}

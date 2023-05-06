@@ -56,5 +56,8 @@ let getAllmovies = () =>{
     }
 }
 
+
+
+
 export default postmovies;
 export { getAllmovies};

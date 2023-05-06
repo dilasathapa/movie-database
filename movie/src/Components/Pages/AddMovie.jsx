@@ -5,6 +5,8 @@ import { FcCameraAddon } from "react-icons/fc";
 import w from "../../images/m3.jpg"
 import { useDispatch } from "react-redux"
 import postmovies from "../../Redux/action.js";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 function AddMovie() {
@@ -40,9 +42,23 @@ function AddMovie() {
 
     }
     const handleRatings = (e) => {
-        setRatings(e.target.value)
+        let value = e.target.value;
+        if (value < 0) {
+            value = 0;
+        } else if (value > 5) {
+            value = 5;
+        }
+
+        setRatings(value)
 
     }
+    const handleKeyDown = (event) => {
+        const { key } = event;
+
+        if (key === '-' || key === '+' || key === 'e') {
+            event.preventDefault();
+        }
+    };
     const handlDirector = (e) => {
         setDirector(e.target.value)
 
@@ -70,13 +86,20 @@ function AddMovie() {
     };
 
     const sendData = () => {
+         toast('movie added successfully!', {
+            position: toast.POSITION.TOP_RIGHT
+        });
         dispatch(postmovies({ title, genre, year, director, ratings, synopsis, cast, fileData }))
         // window.location.reload()
     }
+
+    // const showToastMessage = () => {
+       
+    // };
     return (
         <>
             <div >
-                <h1>Addmovie</h1>
+                {/* <h1>Addmovie</h1> */}
                 <div id="add-parent">
                     <img src={bg} alt="b" />
                 </div>
@@ -84,12 +107,17 @@ function AddMovie() {
                     <div id="input-fields">
                         <input type="text" placeholder="title" id="title" onChange={handleTitle} />
                         <div id="y-g">
-                            <input type="text" placeholder="year" id="year" onChange={handleYear} />
+                            <input type="text" placeholder="year" id="year"
+                                onChange={handleYear} />
                             <input type="text" placeholder="genre" id="genre" onChange={handleGenre} />
 
                         </div>
                         <div id="r-d">
-                            <input type="number" placeholder="ratings" onChange={handleRatings} />
+                            <input type="number" placeholder="ratings" onChange={handleRatings}
+                                value={ratings}
+                                onKeyDown={handleKeyDown}
+                                min={0}
+                                max={5} />
                             <input type="text" placeholder="director" onChange={handlDirector} />
                         </div>
                         <div id="s-c">
@@ -120,12 +148,15 @@ function AddMovie() {
                                     </div>
                                     <button id="sendpost-btn"
                                         onClick={sendData}
+                                        //  onClick={showToastMessage}
                                     >Post</button>
+                                    <ToastContainer />
+
                                 </div>
 
                             ) : (
-                                <div style={{display:"none"}}>
-                                    
+                                <div style={{ display: "none" }}>
+
                                 </div>
                             )
                         }

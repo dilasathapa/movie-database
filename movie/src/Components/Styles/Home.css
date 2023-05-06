@@ -1,14 +1,19 @@
 #home-parent{
-    border: 2px solid red;
+    border: 0px solid red;
+}
+
+#link-tr{
+    text-decoration: none;
+    color: #fff;
 }
 #search-movie{
-    border: 2px solid rgb(29, 181, 18);
+    border: 0px solid rgb(29, 181, 18);
     /* margin-bottom: 30%; */
 
 }
 
 #search-bg{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     height: 350px;
     margin: 0 15%;
     position: relative;
@@ -25,12 +30,14 @@
 .search-box{
     width: 45%;
     height: 42px;
-    border: 2px solid olivedrab;
+    border: 2px solid #2f2c2c;
     border-radius: 60px;
     padding-left: 20px;
     position: absolute;
     margin: -10% 25% 0 25%;
     background-color: rgb(59,59,59);
+    font-size: large;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     /* z-index: ; */
 }
@@ -42,34 +49,52 @@
     position: absolute;
     border-radius: 60px;
     cursor: pointer;
+    background: linear-gradient(to right, 
+        RGB(68 13 173),
+        RGB(99 10 152),
+        RGB(235 65 234)
+      );
+      color: #fff;
+      /* font-size: 20px; */
+      border: none;
 
 
 }
 
 #sorting{
-    border: 2px solid blue;
-    height: 50px;
+    /* border: 2px solid blue; */
+    /* height: 50px; */
     margin-top: 2%;
+    display: flex;
+    gap: 4%;
+    justify-content: end;
+    /* border: 2px solid red; */
+    margin: 2% 15%;
+
 }
 
 /* --------------added----------------------------------------- */
-#sorting{
-    margin: 2% 15%;
-}
-#sorting > button{
+
+/* #sorting > button{
     width: 20%;
     height: 40px;
     margin: 0 3% 0 70%;
-}
+} */
 
 #addedm{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     margin: 2% 15%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
    
 }
-
+#addedm1{
+    /* border: 2px solid green; */
+    margin: 2% 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
 .display-allmovies{
     /* border: 2px solid red; */
     width: 85%;
@@ -77,6 +102,7 @@
     padding: 4%;
     border-radius: 10px;
     background-color: #0c0a0a;
+    margin-bottom: 4%;
 }
 
 #postpic{
@@ -88,29 +114,42 @@
 
 /* ------------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-#trending{
-    border: 2px solid blue;
+#post-image > p{
+    font-size: large;
+    padding-bottom: 2%;
+    margin-top: 2%;
 }
 
-#display-effect{
-    border: 2px solid orange;
-}
 
-#shows{
-    border: 2px solid rgb(54, 4, 12);
-}
 
-#res-movies{
-    border: 2px solid rgb(6, 18, 6);
+
+
+
+
+
+/* ----------------------- */ */
+/* #sorting{
+    display: flex;
+    gap: 4%;
+    justify-content: end;
+    border: 2px solid red;
+} */
+
+/* #sorting select{
+    display: block;
+    width: 20%;
+    border: 2px solid red;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+/* .op{
+} */
+.dis-movies option{
+    /* height: 98px; */
+    font-size: 17px;
+    padding: 15px;
+
 }

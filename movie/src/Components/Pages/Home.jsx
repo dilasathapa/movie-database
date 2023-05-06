@@ -229,8 +229,8 @@ function Home() {
                                     <option className="op" value="yeard">Year : descending</option>
                                     <option className="op" value="titlea">Title : A...Z</option>
                                     <option className="op" value="titlez">Title : Z...A</option>
-                                    <option className="op" value="directora">Title : A...z </option>
-                                    <option className="op" value="directorz">Title : Z...A</option>
+                                    <option className="op" value="directora">Director : A...z </option>
+                                    <option className="op" value="directorz">Director : Z...A</option>
 
 
                                 </select>

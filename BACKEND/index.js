@@ -6,8 +6,6 @@ const cors = require("cors")
 const postRouter = require("./routes/postmovies.routes")
 const getRouter = require("./routes/getmovies.routes")
 const app = express();
-// app.use(express.json());
-
 
 app.use(cors());
 

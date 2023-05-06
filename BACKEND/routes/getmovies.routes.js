@@ -43,6 +43,7 @@ getRouter.get('/searchmovie', async (req, res) => {
         if (!query || typeof query !== 'string' || query.trim() === '') {
             return res.status(400).json({ error: 'Invalid search query' });
         }
+        
 
         //  const isNumeric = !isNaN(query);
         const regex = new RegExp(`.*${query}.*`, 'i');

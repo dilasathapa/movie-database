@@ -36,7 +36,7 @@ function EditMovie() {
     useEffect(() => {
         async function getData() {
             try {
-                const apiUrl = await axios.get(`http://localhost:8080/findmovie/?query=${id}`);
+                const apiUrl = await axios.get(`https://movie-database-backend.onrender.com/findmovie/?query=${id}`);
 
                 setData([apiUrl.data])
                 setTitle(apiUrl.data.title)
@@ -114,7 +114,7 @@ function EditMovie() {
         }
         console.log("obj", obj)
         try {
-            let url = await fetch('http://localhost:8080/editmovie', {
+            let url = await fetch('https://movie-database-backend.onrender.com/editmovie', {
                 method: 'PATCH',
                 headers: {
                     "Content-Type": "application/json"

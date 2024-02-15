@@ -36,7 +36,7 @@ function Home() {
             try {
                 if (searchTerm != "") {
                     // const response = await axios.get(`/api/users?query=${query}`);
-                    const apiUrl = await axios.get(`http://localhost:8080/searchmovie/?query=${searchTerm}`);
+                    const apiUrl = await axios.get(`hhttps://movie-database-backend.onrender.com/searchmovie/?query=${searchTerm}`);
                     console.log(apiUrl.data)
                     setData(apiUrl.data)
                 }

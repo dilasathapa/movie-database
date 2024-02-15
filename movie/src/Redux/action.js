@@ -19,7 +19,9 @@ let postmovies = (postData)=>{
 
     return async(dispatch, getState) =>{
         try {
-            let url = await fetch('http://localhost:8080/addmovies',{
+            // let url = await fetch('http://localhost:8080/addmovies',{
+            let url = await fetch('https://movie-database-backend.onrender.com/addmovies',{
+
                 method : 'POST',
                 headers : {
                     "Content-Type": "application/json",
@@ -39,7 +41,7 @@ let postmovies = (postData)=>{
 let getAllmovies = () =>{
     return async(dispatch, getState)=>{
         try {
-            let url = await fetch('http://localhost:8080/getallmovies',{
+            let url = await fetch('https://movie-database-backend.onrender.com/getallmovies',{
             method : 'GET',
             headers : {
                 "Content-Type": "application/json",

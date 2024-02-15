@@ -23,7 +23,7 @@ function SingleMovie() {
     useEffect(() => {
         async function getData() {
             try {
-                const apiUrl = await axios.get(`http://localhost:8080/findmovie/?query=${id}`);
+                const apiUrl = await axios.get(`https://movie-database-backend.onrender.com/findmovie/?query=${id}`);
 
                 setData([apiUrl.data])
                 setData2(apiUrl.data)
@@ -41,7 +41,7 @@ function SingleMovie() {
         console.log(movieId)
 
         try {
-            const response = await fetch('http://localhost:8080/moviesdelete', {
+            const response = await fetch('https://movie-database-backend.onrender.com/moviesdelete', {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'

@@ -7,7 +7,13 @@ const postRouter = require("./routes/postmovies.routes")
 const getRouter = require("./routes/getmovies.routes")
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+
+app.use(cors({
+    origin: 'http://localhost:3000', // Allow your frontend
+    methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'], // Allow PATCH and others
+    allowedHeaders: ['Content-Type']
+  }));
 
 app.use(express.json({limit: '2mb'}));
 
